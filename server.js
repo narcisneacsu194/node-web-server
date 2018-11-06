@@ -47,6 +47,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    text: 'This is a Github link.'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Could not handle the request.'
